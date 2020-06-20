@@ -1,0 +1,18 @@
+---
+eureka:
+  client:
+    region: "default"
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: "http://localhost:8761/eureka/"
+    healthcheck:
+      enabled: true
+
+zuul:
+  routes:
+    bookservice:
+      path: "/books/**"
+      serviceId: "BookService"
+    ratingservice:
+      path: "/rating/**"
+      serviceId: "RatingService"
