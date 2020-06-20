@@ -11,8 +11,8 @@ eureka:
 zuul:
   routes:
     bookservice:
-      path: "/books/**"
-      serviceId: "BookService"
+      path: "/catalogues/**"
+      serviceId: "CatalogueService"
     ratingservice:
-      path: "/rating/**"
+      path: "/feed-backs/**"
       serviceId: "RatingService"
